@@ -1,0 +1,26 @@
+<style lang="scss">
+@unocss all;
+
+@screen xs {
+  .grid {
+    @apply grid-cols-1;
+  }
+}
+
+@mixin test-foo {
+  content: rgb(0 0 0);
+}
+
+.foo {
+  @include test-foo;
+
+  content: "foo";
+}
+
+.bar {
+  display: block;
+  width: 0;
+  height: 2px;
+  font-size: 2px;
+}
+</style>

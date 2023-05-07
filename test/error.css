@@ -1,0 +1,20 @@
+@unocss all;
+
+@unknown test;
+
+@screen xs {
+  .grid {
+    @apply grid-cols-1;
+  }
+}
+
+.fooFOO {
+  content: test;
+}
+
+.bar {
+}
+
+.bar2 {
+  toto: tata;
+}

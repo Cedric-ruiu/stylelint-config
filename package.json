@@ -1,0 +1,20 @@
+{
+  "name": "@Cedric-Ruiu/stylelint-config",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "author": "Cédric Ruiu <cedric.ruiu@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "postcss-html": "^1.5.0",
+    "stylelint-config-clean-order": "^5.0.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-standard-scss": "^9.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.23",
+    "stylelint": "^15.6.1"
+  }
+}

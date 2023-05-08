@@ -1,4 +1,4 @@
-# @Cedric-ruiu/stylelint-config
+# @cedric-ruiu/stylelint-config
 
 - Based on [Stylelint](https://stylelint.io/) v15
 - Support lint Sass language (extend [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss))
@@ -20,18 +20,18 @@
 ### Install
 
 ```bash
-yarn add -D @Cedric-ruiu/stylelint-config
+yarn add -D @cedric-ruiu/stylelint-config
 ```
 
 ### Config `.stylelintrc`
 
 ```json
 {
-  "extends": "@Cedric-ruiu/stylelint-config"
+  "extends": "@cedric-ruiu/stylelint-config"
 }
 ```
 
-### Config VS Code auto fix
+### Config VSCode auto fix
 
 Install [Stylelint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and create `.vscode/settings.json`
 

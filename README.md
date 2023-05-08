@@ -1,4 +1,4 @@
-# @cedric-ruiu/stylelint-config
+# @cedric-ruiu/stylelint-config [![npm](https://img.shields.io/npm/v/@cedric-ruiu/stylelint-config.svg)](https://npmjs.com/package/@cedric-ruiu/stylelint-config)
 
 - Based on [Stylelint](https://stylelint.io/) v15
 - Support lint Sass language (extend [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss))

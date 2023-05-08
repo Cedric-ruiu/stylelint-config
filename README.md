@@ -20,7 +20,7 @@
 ### Install
 
 ```bash
-pnpm add -D eslint @Cedric-ruiu/stylelint-config
+yarn add -D @Cedric-ruiu/stylelint-config
 ```
 
 ### Config `.stylelintrc`

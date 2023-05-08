@@ -1,3 +1,17 @@
+# [0.2.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.1.1...v0.2.0) (2023-05-08)
+
+
+### Bug Fixes
+
+* move postcss to dependency ([eff9427](https://github.com/Cedric-ruiu/stylelint-config/commit/eff942778c1d521b3ab89cd0f874cb96c8114463))
+
+
+### Features
+
+* force parentheses in mixin calls ([8595238](https://github.com/Cedric-ruiu/stylelint-config/commit/85952385c55e8ba8501630c8ebf43478d47dff9b))
+
+
+
 ## [0.1.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.1.0...v0.1.1) (2023-05-08)
 
 

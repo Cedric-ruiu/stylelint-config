@@ -12,7 +12,7 @@
 }
 
 .foo {
-  @include test-foo;
+  @include test-foo();
 
   content: "foo";
 }

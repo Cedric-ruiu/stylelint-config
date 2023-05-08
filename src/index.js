@@ -35,5 +35,7 @@ module.exports = {
         ],
       },
     ],
+    // There must always be parentheses in mixin calls, even if no arguments are passed, like functions
+    "scss/at-mixin-argumentless-call-parentheses": "always",
   },
 };

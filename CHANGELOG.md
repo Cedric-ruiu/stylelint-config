@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.2.0...v0.2.1) (2023-05-08)
+
+
+### Bug Fixes
+
+* add missing postcss-scss ([58b1ff3](https://github.com/Cedric-ruiu/stylelint-config/commit/58b1ff321fd07ecc0fdb86545f21748e75b780a1))
+
+
+
 # [0.2.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.1.1...v0.2.0) (2023-05-08)
 
 

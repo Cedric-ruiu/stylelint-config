@@ -8,5 +8,5 @@
   "stylelint.validate": ["css", "scss", "vue", "html"],
   "css.validate": false,
   "scss.validate": false,
-  "cSpell.words": ["unocss"]
+  "cSpell.words": ["cedric", "ruiu", "stylelint", "Stylelint", "unocss"]
 }

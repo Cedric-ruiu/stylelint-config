@@ -1,5 +1,5 @@
 {
-  "name": "@Cedric-Ruiu/stylelint-config",
+  "name": "@cedric-ruiu/stylelint-config",
   "version": "0.1.0",
   "main": "src/index.js",
   "author": "Cédric Ruiu <cedric.ruiu@gmail.com>",

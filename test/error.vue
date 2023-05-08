@@ -14,7 +14,7 @@
 }
 
 .fooFOO {
-  @include testTOTO;
+  @include testTOTO();
 
   content: test;
 }

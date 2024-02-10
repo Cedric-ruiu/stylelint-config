@@ -3,7 +3,9 @@
 
 ### Features
 
-* force pusblish release ([25888fd](https://github.com/Cedric-ruiu/stylelint-config/commit/25888fdf5ec9ca8165a4e91d4359f3055c59b959))
+* update Stylelint to v16
+* remove Prettier usage
+* update vscode recommended config
 
 
 

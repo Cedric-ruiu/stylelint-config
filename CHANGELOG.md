@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.2.1...v0.3.0) (2024-02-10)
+
+
+### Features
+
+* force pusblish release ([25888fd](https://github.com/Cedric-ruiu/stylelint-config/commit/25888fdf5ec9ca8165a4e91d4359f3055c59b959))
+
+
+
 ## [0.2.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.2.0...v0.2.1) (2023-05-08)
 
 

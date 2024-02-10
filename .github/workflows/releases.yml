@@ -9,11 +9,11 @@ jobs:
   new-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v4.1.1
 
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3.18.0
+        uses: TriPSs/conventional-changelog-action@v5.2.0
         with:
           github-token: ${{ secrets.github_token }}
 
@@ -27,7 +27,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - uses: JS-DevTools/npm-publish@v2
+      - uses: JS-DevTools/npm-publish@v3.0.1
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"

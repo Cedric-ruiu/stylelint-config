@@ -8,12 +8,10 @@
 - Support UnoCSS rules
 - Logical sorting properties (extend [stylelint-config-clean-order](https://github.com/kutsan/stylelint-config-clean-order))
 - Reasonable defaults, best practices, only one-line of config
-- Use it with [Prettier](https://prettier.io/)
 
 > **Requirements**
 >
-> - [Stylelint](https://stylelint.io/) v15.0.0 and above
-> - [Prettier](https://prettier.io/)
+> - [Stylelint](https://stylelint.io/) v16.0.0 and above
 
 ## Usage
 
@@ -37,14 +35,17 @@ Install [Stylelint extension](https://marketplace.visualstudio.com/items?itemNam
 
 ```json
 {
-  "prettier.enable": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "never"
   },
-  "stylelint.validate": ["css", "scss", "vue", "html"],
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.packageManager": "yarn",
+  "stylelint.snippet": ["css", "postcss", "scss", "html", "vue"],
+  "stylelint.validate": ["css", "postcss", "scss", "html", "vue"],
 }
 ```

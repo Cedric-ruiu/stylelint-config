@@ -1,11 +1,18 @@
+# [0.4.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.3.0...v0.4.0) (2024-05-01)
+
+
+### Features
+
+* bump dependencies ([a173b87](https://github.com/Cedric-ruiu/stylelint-config/commit/a173b87aaf056b86fb81410fd6049d2655f03a5b))
+
+
+
 # [0.3.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.2.1...v0.3.0) (2024-02-10)
 
 
 ### Features
 
-* update Stylelint to v16
-* remove Prettier usage
-* update vscode recommended config
+* force pusblish release ([25888fd](https://github.com/Cedric-ruiu/stylelint-config/commit/25888fdf5ec9ca8165a4e91d4359f3055c59b959))
 
 
 
@@ -38,15 +45,6 @@
 ### Bug Fixes
 
 * update package name ([ca923cd](https://github.com/Cedric-ruiu/stylelint-config/commit/ca923cd9d7967faace247f93ca01996ca6114029))
-
-
-
-# [0.1.0](https://github.com/Cedric-ruiu/stylelint-config/compare/e11beb70b70d976c5e523e0baa75a5fc6b6bd662...v0.1.0) (2023-05-08)
-
-
-### Features
-
-* add all initial features ([e11beb7](https://github.com/Cedric-ruiu/stylelint-config/commit/e11beb70b70d976c5e523e0baa75a5fc6b6bd662))
 
 
 

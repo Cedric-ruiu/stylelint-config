@@ -8,14 +8,14 @@
     "src"
   ],
   "dependencies": {
-    "postcss": "^8.4.35",
-    "postcss-html": "^1.6.0",
+    "postcss": "^8.4.41",
+    "postcss-html": "^1.7.0",
     "postcss-scss": "^4.0.9",
-    "stylelint-config-clean-order": "^5.4.1",
+    "stylelint-config-clean-order": "^6.1.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard-scss": "^13.0.0"
   },
   "devDependencies": {
-    "stylelint": "^16.2.1"
+    "stylelint": "^16.8.1"
   }
 }

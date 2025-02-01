@@ -1,3 +1,17 @@
+# [0.5.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.4.0...v0.5.0) (2025-02-01)
+
+
+### Bug Fixes
+
+* update dependencies ([641a19d](https://github.com/Cedric-ruiu/stylelint-config/commit/641a19d9da4afc86a4b80bc7fca5568ed34101cb))
+
+
+### Features
+
+* bump dependencies ([149682d](https://github.com/Cedric-ruiu/stylelint-config/commit/149682d835a3130b9b0965ac949257283e87fc45))
+
+
+
 # [0.4.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.3.0...v0.4.0) (2024-05-01)
 
 
@@ -36,15 +50,6 @@
 ### Features
 
 * force parentheses in mixin calls ([8595238](https://github.com/Cedric-ruiu/stylelint-config/commit/85952385c55e8ba8501630c8ebf43478d47dff9b))
-
-
-
-## [0.1.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.1.0...v0.1.1) (2023-05-08)
-
-
-### Bug Fixes
-
-* update package name ([ca923cd](https://github.com/Cedric-ruiu/stylelint-config/commit/ca923cd9d7967faace247f93ca01996ca6114029))
 
 
 

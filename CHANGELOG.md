@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.5.0...v0.6.0) (2025-04-09)
+
+
+### Features
+
+* bump dependencies and peer dependencies ([07fe2f5](https://github.com/Cedric-ruiu/stylelint-config/commit/07fe2f5699222c051d5b0bebc052b155b6ff55c5))
+
+
+
 # [0.5.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.4.0...v0.5.0) (2025-02-01)
 
 
@@ -36,20 +45,6 @@
 ### Bug Fixes
 
 * add missing postcss-scss ([58b1ff3](https://github.com/Cedric-ruiu/stylelint-config/commit/58b1ff321fd07ecc0fdb86545f21748e75b780a1))
-
-
-
-# [0.2.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.1.1...v0.2.0) (2023-05-08)
-
-
-### Bug Fixes
-
-* move postcss to dependency ([eff9427](https://github.com/Cedric-ruiu/stylelint-config/commit/eff942778c1d521b3ab89cd0f874cb96c8114463))
-
-
-### Features
-
-* force parentheses in mixin calls ([8595238](https://github.com/Cedric-ruiu/stylelint-config/commit/85952385c55e8ba8501630c8ebf43478d47dff9b))
 
 
 

@@ -9,16 +9,16 @@ jobs:
   new-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v6.0.2
 
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v5.2.0
+        uses: TriPSs/conventional-changelog-action@v6.3.1
         with:
           github-token: ${{ secrets.github_token }}
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
@@ -27,7 +27,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - uses: JS-DevTools/npm-publish@v3.0.1
+      - uses: JS-DevTools/npm-publish@v4.1.5
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"

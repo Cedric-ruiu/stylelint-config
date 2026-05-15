@@ -1,3 +1,12 @@
+## [0.7.3](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.2...v0.7.3) (2026-05-15)
+
+
+### Bug Fixes
+
+* update CI to resolve 404 ([980fac4](https://github.com/Cedric-ruiu/stylelint-config/commit/980fac4ee0faac2e12270bc12994f22c43525a5a))
+
+
+
 ## [0.7.2](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.1...v0.7.2) (2026-05-15)
 
 
@@ -31,20 +40,6 @@
 ### Features
 
 * bump dependencies and peer dependencies ([07fe2f5](https://github.com/Cedric-ruiu/stylelint-config/commit/07fe2f5699222c051d5b0bebc052b155b6ff55c5))
-
-
-
-# [0.5.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.4.0...v0.5.0) (2025-02-01)
-
-
-### Bug Fixes
-
-* update dependencies ([641a19d](https://github.com/Cedric-ruiu/stylelint-config/commit/641a19d9da4afc86a4b80bc7fca5568ed34101cb))
-
-
-### Features
-
-* bump dependencies ([149682d](https://github.com/Cedric-ruiu/stylelint-config/commit/149682d835a3130b9b0965ac949257283e87fc45))
 
 
 

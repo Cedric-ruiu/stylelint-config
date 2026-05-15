@@ -8,8 +8,16 @@ on:
 jobs:
   new-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
 
       - name: Conventional Changelog Action
         id: changelog
@@ -27,7 +35,8 @@ jobs:
           draft: false
           prerelease: false
 
-      - uses: JS-DevTools/npm-publish@v4.1.5
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          access: "public"
+      - name: Publish to npm
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

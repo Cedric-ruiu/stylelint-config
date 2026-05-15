@@ -1,6 +1,6 @@
 # @cedric-ruiu/stylelint-config [![npm](https://img.shields.io/npm/v/@cedric-ruiu/stylelint-config.svg)](https://npmjs.com/package/@cedric-ruiu/stylelint-config)
 
-- Based on [Stylelint](https://stylelint.io/) v16
+- Based on [Stylelint](https://stylelint.io/) v17
 - Support lint Sass language (extend [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss))
 - Support lint HTML files (extend [stylelint-config-html](https://github.com/ota-meshi/stylelint-config-html))
 - Support lint Vue files (including Sass, extend [stylelint-config-html](https://github.com/ota-meshi/stylelint-config-html))
@@ -11,7 +11,7 @@
 
 > **Requirements**
 >
-> - [Stylelint](https://stylelint.io/) v16.0.0 and above
+> - [Stylelint](https://stylelint.io/) v17.0.0 and above
 
 ## Usage
 

@@ -1,6 +1,6 @@
 {
   "name": "@cedric-ruiu/stylelint-config",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "main": "src/index.js",
   "author": "Cédric Ruiu <cedric.ruiu@gmail.com>",
   "license": "MIT",

@@ -1,3 +1,12 @@
+## [0.7.2](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.1...v0.7.2) (2026-05-15)
+
+
+### Bug Fixes
+
+* add missing publish config ([55eb109](https://github.com/Cedric-ruiu/stylelint-config/commit/55eb1092a45420e8668aaaecbcde1f40c39ca7ab))
+
+
+
 ## [0.7.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.0...v0.7.1) (2026-05-15)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * bump dependencies ([149682d](https://github.com/Cedric-ruiu/stylelint-config/commit/149682d835a3130b9b0965ac949257283e87fc45))
-
-
-
-# [0.4.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.3.0...v0.4.0) (2024-05-01)
-
-
-### Features
-
-* bump dependencies ([a173b87](https://github.com/Cedric-ruiu/stylelint-config/commit/a173b87aaf056b86fb81410fd6049d2655f03a5b))
 
 
 

@@ -1,3 +1,12 @@
+## [0.7.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.0...v0.7.1) (2026-05-15)
+
+
+### Bug Fixes
+
+* update CI dependencies ([9c40afd](https://github.com/Cedric-ruiu/stylelint-config/commit/9c40afdc62a88df9fcb1060aa8687d28b4b8d391))
+
+
+
 # [0.7.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.6.0...v0.7.0) (2026-05-15)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * bump dependencies ([a173b87](https://github.com/Cedric-ruiu/stylelint-config/commit/a173b87aaf056b86fb81410fd6049d2655f03a5b))
-
-
-
-# [0.3.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.2.1...v0.3.0) (2024-02-10)
-
-
-### Features
-
-* force pusblish release ([25888fd](https://github.com/Cedric-ruiu/stylelint-config/commit/25888fdf5ec9ca8165a4e91d4359f3055c59b959))
 
 
 

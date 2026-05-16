@@ -1,3 +1,17 @@
+# [1.0.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.3...v1.0.0) (2026-05-16)
+
+
+### Features
+
+* update readme requirement ([8cb6719](https://github.com/Cedric-ruiu/stylelint-config/commit/8cb671971fe605cd0271136b5a4f7af915d84b8a))
+
+
+### BREAKING CHANGES
+
+* update node v20 to v22
+
+
+
 ## [0.7.3](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.2...v0.7.3) (2026-05-15)
 
 
@@ -31,15 +45,6 @@
 ### Features
 
 * bump dependencies ([208278e](https://github.com/Cedric-ruiu/stylelint-config/commit/208278e601f6ed994706bb4324803a682a9f2f0a))
-
-
-
-# [0.6.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.5.0...v0.6.0) (2025-04-09)
-
-
-### Features
-
-* bump dependencies and peer dependencies ([07fe2f5](https://github.com/Cedric-ruiu/stylelint-config/commit/07fe2f5699222c051d5b0bebc052b155b6ff55c5))
 
 
 

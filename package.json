@@ -26,6 +26,13 @@
   "license": "MIT",
   "author": "Cédric Ruiu <cedric.ruiu@gmail.com>",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
   "files": [
     "src"
   ],

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   new-release:
@@ -19,16 +20,18 @@ jobs:
         with:
           node-version-file: .nvmrc
           registry-url: https://registry.npmjs.org
+          cache: yarn
 
       - name: Conventional Changelog Action
         id: changelog
+        if: github.event_name == 'push'
         uses: TriPSs/conventional-changelog-action@v6.3.1
         with:
           github-token: ${{ secrets.github_token }}
 
       - name: Create Release
         uses: softprops/action-gh-release@v3
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        if: steps.changelog.outputs.skipped == 'false'
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
           name: ${{ steps.changelog.outputs.tag }}
@@ -37,7 +40,7 @@ jobs:
           prerelease: false
 
       - name: Publish to npm
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        if: steps.changelog.outputs.skipped == 'false' || github.event_name == 'workflow_dispatch'
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,6 +1,6 @@
 {
   "name": "@cedric-ruiu/stylelint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shareable Stylelint config for CSS, SCSS, HTML, Vue with Tailwind / UnoCSS support and logical property ordering.",
   "keywords": [
     "stylelint",

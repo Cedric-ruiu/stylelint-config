@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/Cedric-ruiu/stylelint-config/compare/v1.0.1...v1.0.2) (2026-05-16)
+
+
+### Bug Fixes
+
+* add missing fields ([4d41dce](https://github.com/Cedric-ruiu/stylelint-config/commit/4d41dcebe4062d8aa2cd39c61dbc709f7914b069))
+
+
+
 ## [1.0.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v1.0.0...v1.0.1) (2026-05-16)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * add missing publish config ([55eb109](https://github.com/Cedric-ruiu/stylelint-config/commit/55eb1092a45420e8668aaaecbcde1f40c39ca7ab))
-
-
-
-## [0.7.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.0...v0.7.1) (2026-05-15)
-
-
-### Bug Fixes
-
-* update CI dependencies ([9c40afd](https://github.com/Cedric-ruiu/stylelint-config/commit/9c40afdc62a88df9fcb1060aa8687d28b4b8d391))
 
 
 

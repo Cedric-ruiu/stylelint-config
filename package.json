@@ -37,14 +37,14 @@
     "src"
   ],
   "dependencies": {
-    "postcss": "8.5.14",
-    "postcss-html": "1.8.1",
-    "postcss-scss": "4.0.9",
-    "stylelint-config-clean-order": "8.0.1",
-    "stylelint-config-html": "1.1.0",
-    "stylelint-config-standard-scss": "17.0.0"
+    "stylelint-config-clean-order": "^8.0.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^7.0.0"
   },
   "devDependencies": {
+    "postcss-html": "1.8.1",
+    "postcss-scss": "4.0.9",
     "stylelint": "17.11.1"
   },
   "peerDependencies": {

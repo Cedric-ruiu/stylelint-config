@@ -13,7 +13,7 @@
 >
 > - [Stylelint](https://stylelint.io/) v17.0.0 and above
 
-## Usage
+> **Requirements:** Stylelint ≥ 17, Node ≥ 22
 
 ### Install
 

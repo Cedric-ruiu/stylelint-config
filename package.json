@@ -1,9 +1,31 @@
 {
   "name": "@cedric-ruiu/stylelint-config",
   "version": "1.0.1",
-  "main": "src/index.js",
-  "author": "Cédric Ruiu <cedric.ruiu@gmail.com>",
+  "description": "Shareable Stylelint config for CSS, SCSS, HTML, Vue with Tailwind / UnoCSS support and logical property ordering.",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "stylelintconfig",
+    "css",
+    "scss",
+    "sass",
+    "html",
+    "vue",
+    "tailwind",
+    "tailwindcss",
+    "unocss"
+  ],
+  "homepage": "https://github.com/Cedric-ruiu/stylelint-config#readme",
+  "bugs": {
+    "url": "https://github.com/Cedric-ruiu/stylelint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cedric-ruiu/stylelint-config.git"
+  },
   "license": "MIT",
+  "author": "Cédric Ruiu <cedric.ruiu@gmail.com>",
+  "main": "src/index.js",
   "files": [
     "src"
   ],
@@ -25,6 +47,7 @@
     "node": ">=22"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

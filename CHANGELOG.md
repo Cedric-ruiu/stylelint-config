@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/Cedric-ruiu/stylelint-config/compare/v1.0.3...v1.0.4) (2026-05-16)
+
+
+### Bug Fixes
+
+* move postcss-html as dependencie ([fc7c0bc](https://github.com/Cedric-ruiu/stylelint-config/commit/fc7c0bc99e4ff8593599c25698df45017f27976f))
+
+
+
 ## [1.0.3](https://github.com/Cedric-ruiu/stylelint-config/compare/v1.0.2...v1.0.3) (2026-05-16)
 
 
@@ -36,15 +45,6 @@
 ### BREAKING CHANGES
 
 * update node v20 to v22
-
-
-
-## [0.7.3](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.2...v0.7.3) (2026-05-15)
-
-
-### Bug Fixes
-
-* update CI to resolve 404 ([980fac4](https://github.com/Cedric-ruiu/stylelint-config/commit/980fac4ee0faac2e12270bc12994f22c43525a5a))
 
 
 

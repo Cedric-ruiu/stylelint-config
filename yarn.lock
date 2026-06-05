@@ -802,10 +802,10 @@ strip-ansi@^7.1.2:
   dependencies:
     ansi-regex "^6.2.2"
 
-stylelint-config-clean-order@^8.0.1:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/stylelint-config-clean-order/-/stylelint-config-clean-order-8.0.2.tgz#38263a6dabed8659f4799e5fc93451ede197da8d"
-  integrity sha512-VP/8B7PJdFVE9XAp3kL7j37qEV4L/rpRhesZpL7eJHm7lVhrD1elId/5lPKLkprF6ZmU/w4kk5xHnBIFyKyt3g==
+stylelint-config-clean-order@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-clean-order/-/stylelint-config-clean-order-10.0.0.tgz#d88c0c2bb289cf4dc6b7c8451c4449369649e4d7"
+  integrity sha512-FKV94g3B1EMSTt0++15jgtU4YwxyeNTAxTRfDW8nx+MvgIWjT9bHRB5SoaNKmVV/hl6CmSjvgtM98lc6Z68KYw==
 
 stylelint-config-html@^1.1.0:
   version "1.1.0"

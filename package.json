@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "postcss-scss": "4.0.9",
-    "stylelint": "17.12.0"
+    "stylelint": "17.13.0"
   },
   "peerDependencies": {
     "stylelint": ">=17"

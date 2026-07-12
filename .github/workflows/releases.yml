@@ -13,7 +13,7 @@ jobs:
       contents: write
       id-token: write
     steps:
-      - uses: actions/checkout@v6.0.2
+      - uses: actions/checkout@v7.0.0
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -31,7 +31,7 @@ jobs:
       - name: Conventional Changelog Action
         id: changelog
         if: github.event_name == 'push'
-        uses: TriPSs/conventional-changelog-action@v6.3.1
+        uses: TriPSs/conventional-changelog-action@v6.4.0
         with:
           github-token: ${{ secrets.github_token }}
 

@@ -1,0 +1,23 @@
+:deep(.child) {
+  color: red;
+}
+
+:global(.child) {
+  color: red;
+}
+
+:slotted(.child) {
+  color: red;
+}
+
+::v-deep(.child) {
+  color: red;
+}
+
+::v-slotted(.child) {
+  color: red;
+}
+
+::v-global(.child) {
+  color: red;
+}

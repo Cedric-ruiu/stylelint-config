@@ -1,6 +1,8 @@
 {
   "recommendations": [
     "stylelint.vscode-stylelint",
+    "biomejs.biome",
     "editorconfig.editorconfig"
-  ]
+  ],
+  "unwantedRecommendations": ["esbenp.prettier-vscode"]
 }

@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a rule change, a new at-rule, or a new preset
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like?
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why?
+      description: >
+        What breaks or gets noisy today? A code sample helps. If this is about a
+        framework directive, a link to its documentation is ideal.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Which presets should this affect?
+      options:
+        - label: The SCSS presets (`.` and `/error`)
+        - label: The plain-CSS presets (`/css` and `/css/error`)

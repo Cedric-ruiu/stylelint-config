@@ -1,0 +1,12 @@
+@unocss all;
+@unocss-placeholder;
+
+.a {
+  --at-apply: flex;
+}
+
+@screen sm {
+  .b {
+    @apply grid;
+  }
+}

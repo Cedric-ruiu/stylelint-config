@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../ui";
+@custom-variant midnight (&:where([data-theme="midnight"] *));
+
+@theme {
+  --font-display: "Satoshi", sans-serif;
+  --breakpoint-3xl: 120rem;
+}
+
+@utility tab-4 {
+  tab-size: 4;
+}
+
+.card {
+  margin: --spacing(4);
+  color: --alpha(var(--color-lime-300) / 50%);
+
+  @variant dark {
+    background: black;
+  }
+}

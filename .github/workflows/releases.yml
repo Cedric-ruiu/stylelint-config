@@ -45,8 +45,11 @@ jobs:
           draft: false
           prerelease: false
 
+      # Only publish when the changelog step actually cut a new version. On a manual
+      # workflow_dispatch that step is skipped, so `skipped` is empty and publishing
+      # would retry a version npm already has.
       - name: Publish to npm
-        if: steps.changelog.outputs.skipped == 'false' || github.event_name == 'workflow_dispatch'
+        if: steps.changelog.outputs.skipped == 'false'
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

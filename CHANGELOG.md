@@ -1,3 +1,23 @@
+# [2.0.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v1.0.4...v2.0.0) (2026-08-07)
+
+
+### Bug Fixes
+
+* support Tailwind CSS v4 at-rules ([bf41db8](https://github.com/Cedric-ruiu/stylelint-config/commit/bf41db8a06657baaedcf8392134d35bfba21f5c9))
+
+
+* chore!: require Node ^22.12 || >=24 ([e857e26](https://github.com/Cedric-ruiu/stylelint-config/commit/e857e264d46c0a9d1557152a354ee616ba73de99))
+* feat!: convert config to ESM and add preset variants ([0fd1a3c](https://github.com/Cedric-ruiu/stylelint-config/commit/0fd1a3cdd54bc4ea72e3eb4881966b88f4274670))
+
+
+### BREAKING CHANGES
+
+* Node 22.0 to 22.11 are no longer supported.
+* the package is now ESM and exports a default export instead of
+module.exports. Configs that extend it by name are unaffected.
+
+
+
 ## [1.0.4](https://github.com/Cedric-ruiu/stylelint-config/compare/v1.0.3...v1.0.4) (2026-05-16)
 
 
@@ -31,20 +51,6 @@
 ### Bug Fixes
 
 * update CI ([fe972db](https://github.com/Cedric-ruiu/stylelint-config/commit/fe972db468adb19ea848fec3dc54886816f9b685))
-
-
-
-# [1.0.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v0.7.3...v1.0.0) (2026-05-16)
-
-
-### Features
-
-* update readme requirement ([8cb6719](https://github.com/Cedric-ruiu/stylelint-config/commit/8cb671971fe605cd0271136b5a4f7af915d84b8a))
-
-
-### BREAKING CHANGES
-
-* update node v20 to v22
 
 
 

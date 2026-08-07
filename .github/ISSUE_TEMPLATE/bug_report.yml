@@ -1,0 +1,41 @@
+name: Bug report
+description: A rule fires when it shouldn't, or doesn't fire when it should
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: preset
+    attributes:
+      label: Which preset?
+      options:
+        - "@cedric-ruiu/stylelint-config"
+        - "@cedric-ruiu/stylelint-config/error"
+        - "@cedric-ruiu/stylelint-config/css"
+        - "@cedric-ruiu/stylelint-config/css/error"
+    validations:
+      required: true
+
+  - type: textarea
+    id: css
+    attributes:
+      label: Input
+      description: The smallest snippet that reproduces it. Mention the file extension.
+      render: css
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect, and what happened instead?
+      description: Paste the Stylelint output if there is any.
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Output of `npx stylelint --version` and the version of this package.
+      placeholder: "stylelint 17.14.1, @cedric-ruiu/stylelint-config 2.0.0, node 22.12"
+    validations:
+      required: true

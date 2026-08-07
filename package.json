@@ -1,7 +1,7 @@
 {
   "name": "@cedric-ruiu/stylelint-config",
   "version": "1.0.2",
-  "description": "Shareable Stylelint config for CSS, SCSS, HTML, Vue with Tailwind / UnoCSS support and logical property ordering.",
+  "description": "Shareable Stylelint config for CSS, SCSS, HTML, Vue, Svelte and Astro with Tailwind CSS v4 / UnoCSS support and logical property ordering.",
   "keywords": [
     "stylelint",
     "stylelint-config",
@@ -25,30 +25,48 @@
   },
   "license": "MIT",
   "author": "Cédric Ruiu <cedric.ruiu@gmail.com>",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./src/index.d.ts",
       "default": "./src/index.js"
-    }
+    },
+    "./error": {
+      "types": "./src/error.d.ts",
+      "default": "./src/error.js"
+    },
+    "./css": {
+      "types": "./src/css.d.ts",
+      "default": "./src/css.js"
+    },
+    "./css/error": {
+      "types": "./src/css-error.d.ts",
+      "default": "./src/css-error.js"
+    },
+    "./create-config": {
+      "types": "./src/create-config.d.ts",
+      "default": "./src/create-config.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
-    "src"
+    "src",
+    "CHANGELOG.md"
   ],
   "scripts": {
-    "test": "node test/run.js",
-    "lint": "stylelint \"test/valid.*\""
+    "test": "node --test \"test/**/*.test.js\"",
+    "test:watch": "node --test --watch \"test/**/*.test.js\"",
+    "lint": "stylelint \"test/fixtures/valid/**/*\""
   },
   "dependencies": {
     "postcss-html": "^2.0.0",
     "stylelint-config-clean-order": "^10.0.0",
     "stylelint-config-html": "^2.0.0",
+    "stylelint-config-standard": "^40.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-order": "^8.1.1"
   },
   "devDependencies": {
-    "postcss-scss": "4.0.9",
     "stylelint": "17.14.1"
   },
   "peerDependencies": {

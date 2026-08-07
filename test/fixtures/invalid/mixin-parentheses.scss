@@ -1,0 +1,7 @@
+@mixin test-foo {
+  content: "foo";
+}
+
+.bar {
+  @include test-foo;
+}

@@ -213,6 +213,52 @@ real project needs, wired together and tested as one unit: styles inside `.vue` 
 `.svelte` / `.astro` / `.html`, Tailwind and UnoCSS at-rules, Vue's scoped-selector
 syntax, and property ordering — with a plain-CSS variant for codebases that dropped Sass.
 
+## What about Biome?
+
+[Biome](https://biomejs.dev/) is very good, and it is faster than Stylelint by an order of
+magnitude — not by a little. It lints and formats CSS, JavaScript, TypeScript and JSON
+from a single Rust binary with no plugin tree to assemble. **If your project is plain CSS
+and you already run Biome, use Biome.** You do not need this package.
+
+The honest differences, as of Biome 2.5.7:
+
+| | Biome 2.5.7 | This package |
+| --- | --- | --- |
+| Lint Sass/SCSS | Not supported — parsing and formatting are [in progress](https://biomejs.dev/internals/language-support/), linting is not started | 34 `scss/` rules |
+| CSS rules available | 35 | 110 enabled (74 core + 34 `scss/` + 2 `order/`) |
+| Property ordering | `useSortedProperties`, fixed built-in order, not configurable | Configurable via `stylelint-order`, and you pick the severity |
+| Styles in markup | HTML, Vue, Svelte, Astro — behind `html.experimentalFullSupportEnabled` | ~77 extensions, stable, no flag |
+| Tailwind v4 at-rules | Yes, via `css.parser.tailwindDirectives` | Yes, by default |
+| Baseline browser support | Built in (`useBaseline`) | Not included — needs a third-party plugin |
+| Sorting Tailwind classes | Yes (`useSortedClasses`) | No — out of scope for Stylelint |
+
+### Use Biome if
+
+- You write plain CSS, no Sass
+- You want one toolchain for JS, TS, JSON and CSS
+- Lint speed is a bottleneck for you
+- You want Baseline checks or Tailwind class sorting without adding plugins
+
+### Use this if
+
+- You write Sass — this is the deciding factor, and it is the one Biome cannot do yet
+- Your styles live in `.vue`, `.svelte`, `.astro`, `.php`, `.twig` or anything else in
+  [that list](https://github.com/ota-meshi/stylelint-config-html), and you would rather not
+  depend on an experimental flag
+- You want to choose your own property order, or make ordering non-blocking
+- You want the depth of Stylelint's rule set and its plugin ecosystem
+
+### Or use both
+
+They are not competing for the same job. Biome for JavaScript, TypeScript and JSON;
+Stylelint for stylesheets. **That is exactly what this repository does** — `yarn lint`
+runs `biome check` over the JavaScript and JSON, and `stylelint` over the CSS fixtures.
+Nothing stops you from doing the same.
+
+> **Checked against Biome 2.5.7 (August 2026).** This comparison has a shelf life: SCSS
+> support is an explicit goal on [Biome's 2026 roadmap](https://biomejs.dev/blog/roadmap-2026/)
+> and was their most requested feature. Re-check both projects before deciding.
+
 ## Migrating from 1.x
 
 - **The package is now ESM.** It exports `export default` instead of `module.exports`.

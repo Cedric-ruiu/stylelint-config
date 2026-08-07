@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v2.0.0...v2.0.1) (2026-08-07)
+
+
+### Bug Fixes
+
+* **ci:** publish via trusted publishing instead of a stored token ([b69e65a](https://github.com/Cedric-ruiu/stylelint-config/commit/b69e65afd08e8f98d511cb795f48d13c879f7843))
+
+
+
 # [2.0.0](https://github.com/Cedric-ruiu/stylelint-config/compare/v1.0.4...v2.0.0) (2026-08-07)
 
 
@@ -42,15 +51,6 @@ module.exports. Configs that extend it by name are unaffected.
 ### Bug Fixes
 
 * add missing fields ([4d41dce](https://github.com/Cedric-ruiu/stylelint-config/commit/4d41dcebe4062d8aa2cd39c61dbc709f7914b069))
-
-
-
-## [1.0.1](https://github.com/Cedric-ruiu/stylelint-config/compare/v1.0.0...v1.0.1) (2026-05-16)
-
-
-### Bug Fixes
-
-* update CI ([fe972db](https://github.com/Cedric-ruiu/stylelint-config/commit/fe972db468adb19ea848fec3dc54886816f9b685))
 
 
 

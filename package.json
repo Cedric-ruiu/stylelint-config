@@ -62,7 +62,10 @@
   "scripts": {
     "test": "node --test \"test/**/*.test.js\"",
     "test:watch": "node --test --watch \"test/**/*.test.js\"",
-    "lint": "stylelint \"test/fixtures/valid/**/*\""
+    "lint": "yarn lint:css && yarn lint:js",
+    "lint:css": "stylelint \"test/fixtures/valid/**/*\"",
+    "lint:js": "biome check .",
+    "format": "biome check --write ."
   },
   "dependencies": {
     "postcss-html": "^2.0.0",
@@ -73,6 +76,7 @@
     "stylelint-order": "^8.1.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.7",
     "stylelint": "17.14.1"
   },
   "peerDependencies": {

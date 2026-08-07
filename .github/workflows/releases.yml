@@ -15,10 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7.0.1
 
-      # No registry-url here on purpose: it makes setup-node write an .npmrc
-      # containing ${NODE_AUTH_TOKEN}, and `cache: yarn` then runs `yarn cache dir`,
-      # where yarn 1 fails hard trying to expand a variable that is only defined on
-      # the publish step. The registry is configured separately, just before publishing.
+      # Runs the tests on the oldest supported runtime. The registry is deliberately
+      # not configured here: publishing needs a newer Node than .nvmrc pins, and
+      # setup-node is run again further down for that.
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
@@ -48,20 +47,37 @@ jobs:
           draft: false
           prerelease: false
 
-      # Writes the authenticated .npmrc. Kept out of the cached setup above, and run
-      # after every yarn invocation, so nothing reads it before NODE_AUTH_TOKEN exists.
-      - name: Configure npm registry
+      # Trusted publishing needs npm >= 11.5.1 and Node >= 22.14. .nvmrc pins the
+      # oldest runtime this package supports (22.12), which ships npm 10.9, so the
+      # publish runs on Node 24 instead. Nothing calls yarn after this point, so the
+      # .npmrc that registry-url writes is never parsed by yarn.
+      - name: Setup Node.js for publishing
         if: steps.changelog.outputs.skipped == 'false'
         uses: actions/setup-node@v7
         with:
-          node-version-file: .nvmrc
+          node-version: 24
           registry-url: https://registry.npmjs.org
 
-      # Only publish when the changelog step actually cut a new version. On a manual
+      # Turns an npm that is too old into a readable failure here, rather than a
+      # confusing authentication error at publish time.
+      - name: Verify npm supports trusted publishing
+        if: steps.changelog.outputs.skipped == 'false'
+        run: |
+          required=11.5.1
+          current=$(npm --version)
+          echo "npm $current (trusted publishing requires >= $required)"
+          if [ "$(printf '%s\n%s\n' "$required" "$current" | sort -V | head -n1)" != "$required" ]; then
+            echo "::error::npm $current is below the $required required for trusted publishing"
+            exit 1
+          fi
+
+      # Authenticated by OIDC through the trusted publisher configured on npmjs.com
+      # for this repository and workflow file — no stored token, and provenance is
+      # generated automatically.
+      #
+      # Only publishes when the changelog step actually cut a new version. On a manual
       # workflow_dispatch that step is skipped, so `skipped` is empty and publishing
       # would retry a version npm already has.
       - name: Publish to npm
         if: steps.changelog.outputs.skipped == 'false'
-        run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public

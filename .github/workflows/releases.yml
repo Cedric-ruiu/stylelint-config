@@ -15,11 +15,14 @@ jobs:
     steps:
       - uses: actions/checkout@v7.0.1
 
+      # No registry-url here on purpose: it makes setup-node write an .npmrc
+      # containing ${NODE_AUTH_TOKEN}, and `cache: yarn` then runs `yarn cache dir`,
+      # where yarn 1 fails hard trying to expand a variable that is only defined on
+      # the publish step. The registry is configured separately, just before publishing.
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
-          registry-url: https://registry.npmjs.org
           cache: yarn
 
       - name: Install dependencies
@@ -44,6 +47,15 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
           draft: false
           prerelease: false
+
+      # Writes the authenticated .npmrc. Kept out of the cached setup above, and run
+      # after every yarn invocation, so nothing reads it before NODE_AUTH_TOKEN exists.
+      - name: Configure npm registry
+        if: steps.changelog.outputs.skipped == 'false'
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://registry.npmjs.org
 
       # Only publish when the changelog step actually cut a new version. On a manual
       # workflow_dispatch that step is skipped, so `skipped` is empty and publishing

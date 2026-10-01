@@ -77,7 +77,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.7",
-    "stylelint": "17.14.1"
+    "stylelint": "17.15.0"
   },
   "peerDependencies": {
     "postcss": "^8.5.0",

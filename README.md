@@ -222,15 +222,15 @@ and you already run Biome, use Biome.** You do not need this package.
 
 The honest differences, as of Biome 2.5.7:
 
-| | Biome 2.5.7 | This package |
-| --- | --- | --- |
-| Lint Sass/SCSS | Not supported — parsing and formatting are [in progress](https://biomejs.dev/internals/language-support/), linting is not started | 34 `scss/` rules |
-| CSS rules available | 35 | 110 enabled (74 core + 34 `scss/` + 2 `order/`) |
-| Property ordering | `useSortedProperties`, fixed built-in order, not configurable | Configurable via `stylelint-order`, and you pick the severity |
-| Styles in markup | HTML, Vue, Svelte, Astro — behind `html.experimentalFullSupportEnabled` | ~77 extensions, stable, no flag |
-| Tailwind v4 at-rules | Yes, via `css.parser.tailwindDirectives` | Yes, by default |
-| Baseline browser support | Built in (`useBaseline`) | Not included — needs a third-party plugin |
-| Sorting Tailwind classes | Yes (`useSortedClasses`) | No — out of scope for Stylelint |
+|                          | Biome 2.5.7                                                                                                                       | This package                                                  |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Lint Sass/SCSS           | Not supported — parsing and formatting are [in progress](https://biomejs.dev/internals/language-support/), linting is not started | 34 `scss/` rules                                              |
+| CSS rules available      | 35                                                                                                                                | 110 enabled (74 core + 34 `scss/` + 2 `order/`)               |
+| Property ordering        | `useSortedProperties`, fixed built-in order, not configurable                                                                     | Configurable via `stylelint-order`, and you pick the severity |
+| Styles in markup         | HTML, Vue, Svelte, Astro — behind `html.experimentalFullSupportEnabled`                                                           | ~77 extensions, stable, no flag                               |
+| Tailwind v4 at-rules     | Yes, via `css.parser.tailwindDirectives`                                                                                          | Yes, by default                                               |
+| Baseline browser support | Built in (`useBaseline`)                                                                                                          | Not included — needs a third-party plugin                     |
+| Sorting Tailwind classes | Yes (`useSortedClasses`)                                                                                                          | No — out of scope for Stylelint                               |
 
 ### Use Biome if
 

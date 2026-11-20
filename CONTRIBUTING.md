@@ -17,8 +17,8 @@ right one.
 
 ## Tooling
 
-[Biome](https://biomejs.dev/) formats and lints the JavaScript, TypeScript and JSON;
-Stylelint lints the CSS fixtures with the config this repo publishes. Two tools, no
+[Biome](https://biomejs.dev/) formats and lints the JavaScript, TypeScript, JSON,
+Markdown and YAML; Stylelint lints the CSS fixtures with the config this repo publishes. Two tools, no
 overlap.
 
 Two things to know about the Biome setup:
@@ -28,10 +28,9 @@ deliberately — some of them are invalid on purpose — and reformatting one si
 invalidates the assertions that point at its line numbers. If you touch `files.includes`,
 re-run `yarn test` and check `git diff test/fixtures/` is empty after `yarn format`.
 
-**Markdown and YAML are not formatted.** Biome doesn't support either yet (both are in
-progress on their roadmap), so `.md` and `.yml` files are left to `.editorconfig`, which
-covers indentation, line endings, trailing whitespace and the final newline. Wrap
-Markdown by hand at a sensible width.
+**Markdown is formatted, but not wrapped.** Biome normalises Markdown (tables, list
+markers, spacing) but leaves line length alone, so wrap prose by hand at a sensible
+width. `CHANGELOG.md` is excluded: the release workflow generates it.
 
 ## Layout
 

@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
 import { describe, it } from "node:test";
 
 import { createConfig } from "../src/create-config.js";
@@ -6,7 +8,13 @@ import css from "../src/css.js";
 import cssError from "../src/css-error.js";
 import error from "../src/error.js";
 import index from "../src/index.js";
-import { lintCode } from "./helpers.js";
+import { assertClean, FIXTURES, lintCode } from "./helpers.js";
+
+const VALID_FIXTURES = fs.readdirSync(path.join(FIXTURES, "valid")).sort();
+// Sass fixtures are out of scope for the plain-CSS presets.
+const VALID_CSS_FIXTURES = VALID_FIXTURES.filter(
+  (f) => !f.endsWith(".scss") && !f.endsWith(".sass"),
+);
 
 const MISORDERED = ".bar {\n  color: red;\n  display: block;\n}\n";
 const TAILWIND_V4 =
@@ -53,6 +61,24 @@ describe("preset matrix", () => {
       it("extends stylelint-config-html for embedded styles", () => {
         assert.ok(config.extends.includes("stylelint-config-html"));
       });
+
+      // `yarn lint` only runs the fixtures through the default preset, so rules the
+      // SCSS layer turns off (e.g. at-rule-prelude-no-invalid) would go unchecked.
+      if (!scss) {
+        it("still validates the prelude of standard at-rules", async () => {
+          const warnings = await lintCode('@property foo {\n  syntax: "*";\n}\n', {
+            config,
+          });
+
+          assert.ok(warnings.some((w) => w.rule === "at-rule-prelude-no-invalid"));
+        });
+      }
+
+      for (const fixture of scss ? VALID_FIXTURES : VALID_CSS_FIXTURES) {
+        it(`lints valid/${fixture} clean`, async () => {
+          await assertClean(`valid/${fixture}`, { config });
+        });
+      }
     });
   }
 

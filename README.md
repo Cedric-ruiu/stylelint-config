@@ -6,13 +6,13 @@
 
 Shareable [Stylelint](https://stylelint.io/) config with sensible defaults — one-liner setup.
 
-- Built on Stylelint v17
+- Built on Stylelint v18
 - **CSS** and **Sass/SCSS** (extends [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss))
 - **Styles embedded in markup** — `.html`, `.vue`, `.svelte`, `.astro`, `.php`, `.xml`, `.svg` and [70+ more extensions](https://github.com/ota-meshi/stylelint-config-html) (extends [stylelint-config-html](https://github.com/ota-meshi/stylelint-config-html))
 - **Tailwind CSS v4 and v3**, plus **UnoCSS** at-rules
 - **Logical property ordering**, autofixable (extends [stylelint-config-clean-order](https://github.com/kutsan/stylelint-config-clean-order))
 
-> **Requirements:** Stylelint ≥ 17, Node `^22.12` or `≥ 24`
+> **Requirements:** Stylelint 18, Node `^22.22.2`, `^24.15.0` or `≥ 26`
 
 ## Install
 
@@ -164,6 +164,7 @@ On top of the extended configs, this package adds:
 | `scss/at-mixin-argumentless-call-parentheses`                 | `"always"`                                                                                                                                     | Mixin calls always look like functions                |
 | `import-notation` _(`/css` only)_                             | `"string"`                                                                                                                                     | Tailwind v4 writes `@import "tailwindcss"`            |
 | `declaration-property-value-no-unknown` _(`/css` only)_       | ignore `--*()` and `theme()`                                                                                                                   | Tailwind v4 theme functions                           |
+| `at-rule-prelude-no-invalid` _(`/css` only)_                  | ignore the Tailwind / UnoCSS at-rules listed above                                                                                             | Stylelint reads `@apply` as the CSS Mixins draft      |
 
 ## Override / extend
 
@@ -252,12 +253,26 @@ The honest differences, as of Biome 2.5.7:
 
 They are not competing for the same job. Biome for JavaScript, TypeScript and JSON;
 Stylelint for stylesheets. **That is exactly what this repository does** — `yarn lint`
-runs `biome check` over the JavaScript and JSON, and `stylelint` over the CSS fixtures.
-Nothing stops you from doing the same.
+runs `biome check` over the JavaScript, JSON, Markdown and YAML, and `stylelint` over
+the CSS fixtures. Nothing stops you from doing the same.
 
 > **Checked against Biome 2.5.7 (August 2026).** This comparison has a shelf life: SCSS
 > support is an explicit goal on [Biome's 2026 roadmap](https://biomejs.dev/blog/roadmap-2026/)
 > and was their most requested feature. Re-check both projects before deciding.
+
+## Migrating from 2.x
+
+- **Stylelint 18 is now required** (it was `≥ 17`). Upgrade `stylelint` alongside this
+  package. Its [migration guide](https://github.com/stylelint/stylelint/blob/main/docs/migration-guide/to-18.md)
+  covers the CLI and API changes.
+- **Node `^22.22.2`, `^24.15.0` or `≥ 26`** is now required, the floor stylelint 18 sets.
+- **New problems may be reported.** The standard config now turns on
+  `selector-no-deprecated`, plus `value-no-invalid`, `selector-no-invalid`,
+  `selector-no-unmatchable` and `at-charset-rule-no-invalid` on the `/css` presets.
+  `declaration-property-value-no-unknown` now resolves `var()` against custom properties
+  declared in the file (`/css` presets).
+- **`declaration-block-single-line-max-declarations` is gone**, removed from Stylelint
+  itself. If you set it in your own config, remove it.
 
 ## Migrating from 1.x
 
@@ -279,7 +294,7 @@ Conventional Commits are required — they drive the changelog and the release p
 yarn install
 yarn test          # node:test suite
 yarn test:watch
-yarn lint          # stylelint on fixtures + prettier
+yarn lint          # stylelint on fixtures + biome check
 yarn format
 ```
 

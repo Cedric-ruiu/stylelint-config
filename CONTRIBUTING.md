@@ -12,7 +12,7 @@ yarn lint          # stylelint on the fixtures + biome check
 yarn format        # biome check --write
 ```
 
-Node `^22.12` or `>= 24` is required. The repo ships a `.nvmrc`, so `nvm use` picks the
+Node `^22.22.2`, `^24.15.0` or `>= 26` is required. The repo ships a `.nvmrc`, so `nvm use` picks the
 right one.
 
 ## Tooling

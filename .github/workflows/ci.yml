@@ -16,8 +16,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Floor comes from stylelint-config-html / postcss-html: ^22.12 || >=24
-        node-version: ["22.12", 24]
+        # The floor of each supported line, from stylelint 18:
+        # ^22.22.2 || ^24.15.0 || >=26
+        node-version: ["22.22.2", "24.15.0", 26]
     steps:
       - uses: actions/checkout@v7.0.1
 

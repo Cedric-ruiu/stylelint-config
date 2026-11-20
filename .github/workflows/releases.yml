@@ -51,7 +51,7 @@ jobs:
           prerelease: false
 
       # Trusted publishing needs npm >= 11.5.1 and Node >= 22.14. .nvmrc pins the
-      # oldest runtime this package supports (22.12), which ships npm 10.9, so the
+      # oldest runtime this package supports (22.22.2), which ships npm 10.9, so the
       # publish runs on Node 24 instead. Nothing calls yarn after this point, so the
       # .npmrc that registry-url writes is never parsed by yarn.
       - name: Setup Node.js for publishing

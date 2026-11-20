@@ -1,6 +1,6 @@
 {
   "name": "@cedric-ruiu/stylelint-config",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Stylelint config for CSS, Sass and styles in Vue, Svelte, Astro, HTML and PHP, with Tailwind CSS, UnoCSS and property ordering. Pairs with Biome: Biome formats, this lints.",
   "keywords": [
     "stylelint",

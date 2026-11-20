@@ -88,7 +88,8 @@ docs: document the /css preset
 chore(deps): bump stylelint
 ```
 
-Breaking changes need a `BREAKING CHANGE:` footer.
+Breaking changes need a `!` after the type (`feat!: drop stylelint 17`) or a
+`BREAKING CHANGE:` footer.
 
 ## Releasing
 

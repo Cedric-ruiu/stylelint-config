@@ -36,6 +36,9 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v6.5.0
         with:
           github-token: ${{ secrets.github_token }}
+          # The default "angular" preset does not parse `type!:` headers, so a
+          # breaking change marked with `!` would be silently ignored.
+          preset: conventionalcommits
 
       - name: Create Release
         uses: softprops/action-gh-release@v3

@@ -1,7 +1,7 @@
 {
   "name": "@cedric-ruiu/stylelint-config",
   "version": "2.0.1",
-  "description": "Shareable Stylelint config for CSS, SCSS, HTML, Vue, Svelte and Astro with Tailwind CSS v4 / UnoCSS support and logical property ordering.",
+  "description": "Stylelint config for CSS, Sass and styles in Vue, Svelte, Astro, HTML and PHP, with Tailwind CSS, UnoCSS and property ordering. Pairs with Biome: Biome formats, this lints.",
   "keywords": [
     "stylelint",
     "stylelint-config",
@@ -18,7 +18,9 @@
     "tailwindcss",
     "unocss",
     "order",
-    "css-order"
+    "css-order",
+    "php",
+    "biome"
   ],
   "homepage": "https://github.com/Cedric-ruiu/stylelint-config#readme",
   "bugs": {

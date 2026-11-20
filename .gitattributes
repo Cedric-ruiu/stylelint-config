@@ -1,2 +1,3 @@
 * text=auto eol=lf
 yarn.lock -diff linguist-generated=true
+/.yarn/releases/** binary linguist-generated=true

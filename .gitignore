@@ -3,5 +3,13 @@
 *.sass.map
 *.scss.map
 node_modules
-yarn-error.log
 *.tgz
+
+# Yarn 4, without Zero-Installs
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

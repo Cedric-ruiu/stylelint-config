@@ -22,10 +22,11 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
-          cache: yarn
 
+      # The runner's global Yarn 1 defers to the release committed in
+      # .yarn/releases (yarnPath), so no Corepack is needed.
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run tests
         run: yarn test

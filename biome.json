@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!**/CHANGELOG.md", "!**/yarn.lock", "!test/fixtures"]
+    "includes": ["**", "!**/CHANGELOG.md", "!**/yarn.lock", "!test/fixtures", "!.yarn"]
   },
   "formatter": {
     "enabled": true,

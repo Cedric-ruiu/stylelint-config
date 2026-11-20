@@ -16,8 +16,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Floor comes from stylelint-config-html / postcss-html: ^22.12 || >=24
-        node-version: ["22.12", 24]
+        # The floor of each supported line, from stylelint 18:
+        # ^22.22.2 || ^24.15.0 || >=26
+        node-version: ["22.22.2", "24.15.0", 26]
     steps:
       - uses: actions/checkout@v7.0.1
 
@@ -25,10 +26,11 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
-          cache: yarn
 
+      # The runner's global Yarn 1 defers to the release committed in
+      # .yarn/releases (yarnPath), so no Corepack is needed.
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run tests
         run: yarn test
@@ -42,10 +44,9 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
-          cache: yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Lint fixtures and formatting
         run: yarn lint

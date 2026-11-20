@@ -88,7 +88,16 @@ export function createConfig({ scss = true, severity = "warning" } = {}) {
       // on whether the SCSS layer is loaded.
       ...(scss
         ? { "scss/at-rule-no-unknown": [true, { ignoreAtRules: AT_RULES }] }
-        : { "at-rule-no-unknown": [true, { ignoreAtRules: AT_RULES }] }),
+        : {
+            "at-rule-no-unknown": [true, { ignoreAtRules: AT_RULES }],
+            // Stylelint 18 validates `@apply` against the CSS Mixins draft
+            // (`@apply --mixin`), which rejects Tailwind's `@apply flex p-4`.
+            // stylelint-config-recommended-scss already turns this rule off.
+            "at-rule-prelude-no-invalid": [true, { ignoreAtRules: AT_RULES }],
+            // theme() is how Tailwind reaches breakpoints in media queries, where
+            // var() is not allowed: `@media (width >= theme(--breakpoint-xl))`.
+            "media-query-no-invalid": [true, { ignoreFunctions: ["theme"] }],
+          }),
       // Keeps stylelint-config-clean-order's shape — it extends last and wins —
       // and only adds the at-rules that may hug the previous line.
       "at-rule-empty-line-before": [

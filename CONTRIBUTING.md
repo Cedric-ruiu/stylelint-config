@@ -12,14 +12,19 @@ yarn lint          # stylelint on the fixtures + biome check
 yarn format        # biome check --write
 ```
 
-Node `^22.12` or `>= 24` is required. The repo ships a `.nvmrc`, so `nvm use` picks the
-right one.
+Node `^22.22.2`, `^24.15.0` or `>= 26` is required. The repo ships a `.nvmrc`, so
+`nvm use` picks the right one.
+
+The repo uses Yarn 4, committed in `.yarn/releases` and referenced by `yarnPath` in
+`.yarnrc.yml`. Any global Yarn, including Yarn 1, hands over to that exact version, so
+there is nothing to install. To upgrade it, run `yarn set version <version> --yarn-path`
+and commit the new release file.
 
 ## Tooling
 
 [Biome](https://biomejs.dev/) formats and lints the JavaScript, TypeScript, JSON,
-Markdown and YAML; Stylelint lints the CSS fixtures with the config this repo publishes. Two tools, no
-overlap.
+Markdown and YAML; Stylelint lints the CSS fixtures with the config this repo publishes.
+Two tools, no overlap.
 
 Two things to know about the Biome setup:
 
@@ -85,10 +90,17 @@ the changelog and the release pipeline. PR titles are linted too.
 feat: add support for @variant
 fix: allow @source in file headers
 docs: document the /css preset
-chore(deps): bump stylelint
+fix(deps): bump stylelint-config-standard
+chore(deps-dev): bump @biomejs/biome
 ```
 
-Breaking changes need a `BREAKING CHANGE:` footer.
+Only `feat`, `fix`, `perf`, `revert` and breaking changes publish a release; `chore`,
+`ci`, `docs` and the rest never do. So a bump of a runtime dependency (`dependencies`)
+is `fix(deps)`, and a bump of a dev-only one is `chore(deps-dev)`. Dependabot follows
+the same rule.
+
+Breaking changes need a `!` after the type (`feat!: drop stylelint 17`) or a
+`BREAKING CHANGE:` footer.
 
 ## Releasing
 

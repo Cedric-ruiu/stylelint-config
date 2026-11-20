@@ -22,10 +22,11 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
-          cache: yarn
 
+      # The runner's global Yarn 1 defers to the release committed in
+      # .yarn/releases (yarnPath), so no Corepack is needed.
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run tests
         run: yarn test
@@ -36,6 +37,9 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v6.5.0
         with:
           github-token: ${{ secrets.github_token }}
+          # The default "angular" preset does not parse `type!:` headers, so a
+          # breaking change marked with `!` would be silently ignored.
+          preset: conventionalcommits
 
       - name: Create Release
         uses: softprops/action-gh-release@v3
@@ -48,7 +52,7 @@ jobs:
           prerelease: false
 
       # Trusted publishing needs npm >= 11.5.1 and Node >= 22.14. .nvmrc pins the
-      # oldest runtime this package supports (22.12), which ships npm 10.9, so the
+      # oldest runtime this package supports (22.22.2), which ships npm 10.9, so the
       # publish runs on Node 24 instead. Nothing calls yarn after this point, so the
       # .npmrc that registry-url writes is never parsed by yarn.
       - name: Setup Node.js for publishing

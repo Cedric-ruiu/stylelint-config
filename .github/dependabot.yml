@@ -5,6 +5,14 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    # Yarn refuses versions younger than a day (npmMinimalAgeGate default).
+    cooldown:
+      default-days: 2
+    # fix(deps) for runtime dependencies triggers a release; chore(deps-dev) does not.
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     groups:
       stylelint:
         patterns:
@@ -17,6 +25,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    commit-message:
+      prefix: ci
     groups:
       gh-actions:
         patterns:

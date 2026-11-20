@@ -36,6 +36,6 @@ body:
     attributes:
       label: Versions
       description: Output of `npx stylelint --version` and the version of this package.
-      placeholder: "stylelint 17.14.1, @cedric-ruiu/stylelint-config 2.0.0, node 22.12"
+      placeholder: "stylelint 18.1.0, @cedric-ruiu/stylelint-config 3.0.0, node 24.15.0"
     validations:
       required: true

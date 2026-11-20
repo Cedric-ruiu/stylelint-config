@@ -1,7 +1,7 @@
 {
   "name": "@cedric-ruiu/stylelint-config",
   "version": "2.0.1",
-  "description": "Shareable Stylelint config for CSS, SCSS, HTML, Vue, Svelte and Astro with Tailwind CSS v4 / UnoCSS support and logical property ordering.",
+  "description": "Stylelint config for CSS, Sass and styles in Vue, Svelte, Astro, HTML and PHP, with Tailwind CSS, UnoCSS and property ordering. Pairs with Biome: Biome formats, this lints.",
   "keywords": [
     "stylelint",
     "stylelint-config",
@@ -18,7 +18,9 @@
     "tailwindcss",
     "unocss",
     "order",
-    "css-order"
+    "css-order",
+    "php",
+    "biome"
   ],
   "homepage": "https://github.com/Cedric-ruiu/stylelint-config#readme",
   "bugs": {
@@ -71,17 +73,18 @@
     "postcss-html": "^2.0.1",
     "stylelint-config-clean-order": "^10.0.0",
     "stylelint-config-html": "^2.0.0",
-    "stylelint-config-standard": "^40.0.0",
-    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-config-standard": "^41.1.0",
+    "stylelint-config-standard-scss": "^18.0.0",
     "stylelint-order": "^8.1.3"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.8",
-    "stylelint": "17.14.1"
+    "postcss": "^8.5.33",
+    "stylelint": "18.1.0"
   },
   "peerDependencies": {
     "postcss": "^8.5.0",
-    "stylelint": ">=17"
+    "stylelint": "^18.0.0"
   },
   "peerDependenciesMeta": {
     "postcss": {
@@ -89,9 +92,9 @@
     }
   },
   "engines": {
-    "node": "^22.12.0 || >=24"
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   },
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "yarn@4.18.1+sha512.b2e1e7524f654f2749d32b4ebcb4622473cb5bcbc485df2007e12a154e50162a4d795526768bc5f5b8f81717bfd79deb2472813d86fb5ae2eb551fa9c872b08f",
   "publishConfig": {
     "access": "public",
     "provenance": true

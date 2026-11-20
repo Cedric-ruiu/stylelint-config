@@ -85,8 +85,14 @@ the changelog and the release pipeline. PR titles are linted too.
 feat: add support for @variant
 fix: allow @source in file headers
 docs: document the /css preset
-chore(deps): bump stylelint
+fix(deps): bump stylelint-config-standard
+chore(deps-dev): bump @biomejs/biome
 ```
+
+Only `feat`, `fix`, `perf`, `revert` and breaking changes publish a release; `chore`,
+`ci`, `docs` and the rest never do. So a bump of a runtime dependency (`dependencies`)
+is `fix(deps)`, and a bump of a dev-only one is `chore(deps-dev)`. Dependabot follows
+the same rule.
 
 Breaking changes need a `!` after the type (`feat!: drop stylelint 17`) or a
 `BREAKING CHANGE:` footer.

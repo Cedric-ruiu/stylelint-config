@@ -5,6 +5,11 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    # fix(deps) for runtime dependencies triggers a release; chore(deps-dev) does not.
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     groups:
       stylelint:
         patterns:
@@ -17,6 +22,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    commit-message:
+      prefix: ci
     groups:
       gh-actions:
         patterns:

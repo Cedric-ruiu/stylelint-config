@@ -72,6 +72,15 @@ describe("preset matrix", () => {
 
           assert.ok(warnings.some((w) => w.rule === "at-rule-prelude-no-invalid"));
         });
+
+        it("still validates media queries outside theme()", async () => {
+          const warnings = await lintCode(
+            "@media (width >= var(--bp)) {\n  .a {\n    color: red;\n  }\n}\n",
+            { config },
+          );
+
+          assert.ok(warnings.some((w) => w.rule === "media-query-no-invalid"));
+        });
       }
 
       for (const fixture of scss ? VALID_FIXTURES : VALID_CSS_FIXTURES) {

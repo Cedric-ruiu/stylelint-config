@@ -13,3 +13,9 @@
     @apply grid-cols-1;
   }
 }
+
+@media (min-width: theme(screens.md)) {
+  .grid {
+    @apply grid-cols-2;
+  }
+}

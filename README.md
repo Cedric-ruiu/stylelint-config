@@ -149,7 +149,17 @@ A typical Tailwind v4 entry file lints clean, header included:
 ```
 
 The v4 theme functions — `--alpha()`, `--spacing()` and the legacy `theme()` — are
-accepted too.
+accepted too, including `theme()` in media queries, where `var()` is not allowed:
+
+```css
+@media (width >= theme(--breakpoint-xl)) {
+  /* … */
+}
+```
+
+In declarations, write `var(--color-brand)` rather than `theme(--color-brand)`, as
+Tailwind recommends. When the variable is declared in the same file, `theme(--x)` is
+reported by `custom-property-no-missing-var-function`.
 
 ## Custom rules
 
@@ -165,6 +175,7 @@ On top of the extended configs, this package adds:
 | `import-notation` _(`/css` only)_                             | `"string"`                                                                                                                                     | Tailwind v4 writes `@import "tailwindcss"`            |
 | `declaration-property-value-no-unknown` _(`/css` only)_       | ignore `--*()` and `theme()`                                                                                                                   | Tailwind v4 theme functions                           |
 | `at-rule-prelude-no-invalid` _(`/css` only)_                  | ignore the Tailwind / UnoCSS at-rules listed above                                                                                             | Stylelint reads `@apply` as the CSS Mixins draft      |
+| `media-query-no-invalid` _(`/css` only)_                      | ignore `theme()`                                                                                                                               | Tailwind breakpoints in media queries                 |
 
 ## Override / extend
 
